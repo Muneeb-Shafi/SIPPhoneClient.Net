@@ -1,0 +1,12 @@
+C:\Users\Phant\source\repos\Softphone.Net\Softphone.Net\obj\Debug\Softphone.Net.csproj.AssemblyReference.cache
+C:\Users\Phant\source\repos\Softphone.Net\Softphone.Net\obj\Debug\Softphone.Net.Form1.resources
+C:\Users\Phant\source\repos\Softphone.Net\Softphone.Net\obj\Debug\Softphone.Net.Properties.Resources.resources
+C:\Users\Phant\source\repos\Softphone.Net\Softphone.Net\obj\Debug\Softphone.Net.csproj.GenerateResource.cache
+C:\Users\Phant\source\repos\Softphone.Net\Softphone.Net\obj\Debug\Softphone.Net.csproj.CoreCompileInputs.cache
+C:\Users\Phant\source\repos\Softphone.Net\Softphone.Net\bin\Debug\Softphone.Net.exe.config
+C:\Users\Phant\source\repos\Softphone.Net\Softphone.Net\bin\Debug\Softphone.Net.exe
+C:\Users\Phant\source\repos\Softphone.Net\Softphone.Net\bin\Debug\Softphone.Net.pdb
+C:\Users\Phant\source\repos\Softphone.Net\Softphone.Net\bin\Debug\VoIPSDK.dll
+C:\Users\Phant\source\repos\Softphone.Net\Softphone.Net\obj\Debug\Softphon.7C8017C9.Up2Date
+C:\Users\Phant\source\repos\Softphone.Net\Softphone.Net\obj\Debug\Softphone.Net.exe
+C:\Users\Phant\source\repos\Softphone.Net\Softphone.Net\obj\Debug\Softphone.Net.pdb
