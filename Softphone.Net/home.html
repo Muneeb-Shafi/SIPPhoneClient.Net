@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WebSocket Client</title>
+</head>
+<body>
+
+<button id="sendMessageBtn">Send Message</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var socket = new WebSocket('ws://localhost:8110'); // Replace 'localhost' with your server address
+
+    // Event listener for WebSocket open
+    socket.addEventListener('open', function(event) {
+        console.log('Connected to WebSocket server');
+    });
+
+    // Event listener for WebSocket error
+    socket.addEventListener('error', function(event) {
+        console.error('WebSocket error:', event);
+    });
+
+    // Event listener for WebSocket close
+    socket.addEventListener('close', function(event) {
+        console.log('Disconnected from WebSocket server');
+    });
+
+    // Event listener for button click
+    document.getElementById('sendMessageBtn').addEventListener('click', function() {
+        var message = "1222 abcd1234 192.168.12.5 1208";
+        socket.send(message);
+        console.log('Message sent to WebSocket server:', message);
+    });
+});
+</script>
+
+</body>
+</html>

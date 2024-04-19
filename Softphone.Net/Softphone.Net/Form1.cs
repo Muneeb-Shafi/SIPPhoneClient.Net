@@ -13,8 +13,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ozeki.voip.sip.client;
 using Ozeki.Media.MediaHandlers;
-using Ozeki.VoIP;
-using Ozeki.VoIP.SDK;
 using System.Threading;
 
 namespace Softphone.Net
@@ -40,12 +38,13 @@ namespace Softphone.Net
             username = name;
             address = add;
             recipent = recp;
+            call = new CallHandlerSample(username, address, password);
+
             AppDomain.CurrentDomain.ProcessExit += CurrentDomain_ProcessExit;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            call = new CallHandlerSample(username, address, password);
             RegState rs = call.Call($"{recipent}@{address}");
 
             while (true)
@@ -61,10 +60,7 @@ namespace Softphone.Net
                 }
             }
 
-            if(call.Call_State == CallState.InCall)
-            {
-                buttonChange();
-            }
+            
 
         }
 
@@ -75,13 +71,13 @@ namespace Softphone.Net
         {
             button1.Enabled = true;
             button1.Text = "End Call";
-            button1.ForeColor = Color.Red;
+            button1.BackColor = Color.Red;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             call.call.HangUp();
-            softphone.Close();
+            this.Close();
         }
 
 
@@ -92,6 +88,14 @@ namespace Softphone.Net
             {
                 call.call.HangUp();
                 softphone.Close();
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (call.Call_State == CallState.InCall || call.Call_State == CallState.Ringing || call.Call_State == CallState.Setup)
+            {
+                buttonChange();
             }
         }
     }
